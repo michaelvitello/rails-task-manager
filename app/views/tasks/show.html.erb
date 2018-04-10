@@ -1,0 +1,12 @@
+<h1><%= @task.title %></h1>
+
+<p><%= @task.details %></p>
+
+  <% if !@task.completed %>
+    <p id="status"><i class="fa fa-square"></i> This task is not completed </p>
+  <% else %>
+    <p id="status"><i class="fa fa-check-square"></i> This task is completed </p>
+  <% end %>
+
+<p><%= link_to 'Back', :back %> <%= link_to 'Home', :tasks %></p>
+<button type="button" class="btn btn-success" id="edit"><%= link_to 'Edit task', :edit_task %></button>
